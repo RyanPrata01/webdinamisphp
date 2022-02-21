@@ -1,0 +1,436 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/*Navbar*/
+
+nav{
+    display: flex;
+    padding: 1% 4%;
+    background-color: rgb(136, 124, 103);
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+}
+
+nav img{
+    width: 55px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: #ffff;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fa5c00;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li :hover::after{
+    width: 100%;
+}
+
+/* Side bar */
+
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 18px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -8px;
+    top: -8px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #000080;    ;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Animasi Side Bar  */
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-3.3px, -2px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Landing Page */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(7, 7, 7, 0.5),rgba(54, 50, 50, 0.5)),url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    z-index: -3;
+}
+
+.text-box{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    position: absolute;
+    margin-left: 5%;
+    top: 30%;
+    font-family: 'Lato', sans-serif;    
+}
+
+.text-box h1{
+    font-size: 35px;
+}
+
+.text-box p{
+    margin: 10px 0px 40px;
+    font-size: 15px;
+}
+
+.transition{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.transition:hover{
+    border: 1px solid #fa5c00;
+    background: #fa5c00;
+    transition: 1s;
+}
+
+/*About*/
+
+
+#about{
+    width: 100%;
+    padding: 40px 0;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(238, 155, 107, 0.5),rgba(0, 0, 0, 0.5)),url(img/bg-sejarah.png);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    color: rgb(255, 255, 255);
+    z-index: -3;
+}
+
+.title-about{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.title-about h1{
+    width: 100%;
+    padding: 70px 0;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-text-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center; 
+}
+
+.about-text{
+    flex-basis: 50%;
+}
+
+.about-text h1{
+    text-align: left;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif;  
+}
+
+.about-text p{
+    padding: 0 20px;
+    text-align: initial;
+}
+
+.about-img{
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.about-img img{
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Matrikulasi */
+
+#matrik{
+    width: 100%;
+    padding: 40px 0;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(12, 7, 7, 0.5),rgba(59, 52, 52, 0.5)),url(img/bg-lft.JPG);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    color: #ffff;
+    z-index: -3;
+}
+
+.title-matrik{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.title-matrik h1{
+    width: 100%;
+    padding: 70px 0;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.matrik-text-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center; 
+}
+
+.matrik-text h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif;  
+}
+
+.matrik-text{
+    flex-basis: 50%;
+}
+
+.matrik-text p{
+    padding: 0 20px;
+    text-align: initial;
+}
+
+.matrik-img{
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.matrik-img img{
+    width: 60%;
+    border-radius: 10px;
+}
+
+/* Fasilitas */
+
+#fasilitas{
+    width: 100%;
+    padding: 40px 0;
+    min-height: 100vh;
+    width: 100%;
+    z-index: -3;
+}
+
+.fasilitas1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 300px;
+    padding: 0 12%;
+}
+  
+.card {
+    background-color: #f7f8f9;
+    transition: 0.3s;
+    width: 300px;
+    min-height: 350px;
+    padding: 32px;
+    margin: 81px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+  
+.card:hover {
+    background-color: #fbcb7b;
+    box-shadow: 10px 13px #ffae01;
+}
+
+/* About Me */ 
+
+.about-section{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: rgb(37, 33, 33);
+}
+
+.aboutme-img{
+    width: 1300px;
+    height: auto;
+    
+}
+
+.aboutme-text{
+    width: 550px;
+}
+
+.main{
+    width: 1130px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aboutme-text h2{
+    color: #ffff;
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.aboutme-text h3{
+    color: #ffff;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.aboutme-text p{
+    color: #ffff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 45px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.riwayat{
+    width: 100%;
+    padding: 40px 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(37, 33, 33);
+    font-family: Verdana, Geneva, Tahoma, sans-serif    ;
+    z-index: -3;
+}
+
+.riwayat2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 300px;
+    padding: 0 12%;
+}
+  
+.card {
+    background-color: #f7f8f9;
+    transition: 0.3s;
+    width: 300px;
+    min-height: 350px;
+    padding: 32px;
+    margin: 81px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/* Responsive */
+
+/* Ukuran Tablet */
+
+@media screen and (max-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+/* Ukuran HP */
+
+@media screen and (max-width: 768px){
+    .menu-toggle{
+        display: flex;
+    }
+
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(228, 168, 57);
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
